@@ -1,0 +1,66 @@
+
+
+
+SQL> select job_id from jobs
+  2  where min_salary<=5000 and max_salary>=10000;
+
+JOB_ID
+--------------------
+IT_PROG
+PR_REP
+
+
+SQL> select job_title from jobs
+  2  where min_salary<5000 and max_salary>9000;
+
+JOB_TITLE
+----------------------------------------------------------------------
+Programmer
+Public Relations Representative
+
+
+!=, <> 같지 않다 
+not 모든것을 반대로
+
+
+
+SQL> select * from jobs
+  2  where job_title in ('Programmer','Marketing Manager');
+
+JOB_ID
+--------------------
+JOB_TITLE
+----------------------------------------------------------------------
+MIN_SALARY MAX_SALARY
+---------- ----------
+IT_PROG
+Programmer
+      4000      10000
+
+MK_MAN
+Marketing Manager
+      9000      15000
+
+JOB_ID
+--------------------
+JOB_TITLE
+----------------------------------------------------------------------
+MIN_SALARY MAX_SALARY
+---------- ----------
+
+
+SQL> select job_title from jobs
+  2  where max_salary between 10000 and 15000;
+
+JOB_TITLE
+----------------------------------------------------------------------
+Sales Representative
+Purchasing Manager
+Programmer
+Marketing Manager
+Public Relations Representative
+
+
+
+
+
